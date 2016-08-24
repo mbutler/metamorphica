@@ -1,19 +1,19 @@
 var _ = require('lodash');
 
-var tableIndex = {
-	'Body: Form': _.range(1, 201),
-	'Body: Function': _.range(201, 401),
-	'Mind: Behaviours': _.range(401, 501),
-	'Mind: Cognition': _.range(501, 601),
-	'Psychic Powers': _.range(601, 701),
-	'Supernatural Attributes': _.range(701, 1001)
-};
+var mutationTableIndex = [
+	{name: 'Body: Form', range: _.range(1, 201)},
+	{name: 'Body: Function', range: _.range(201, 401)},
+	{name: 'Mind: Behaviours', range: _.range(401, 501)},
+	{name: 'Mind: Cognition', range: _.range(501, 601)},
+	{name: 'Psychic Powers', range: _.range(601, 701)},
+	{name: 'Supernatural Attributes', range: _.range(701, 1001)}	
+];
 
 //randomly chooses from a table, taking an optional lower limit value other than 1
 function pick(table, lowerLimit) {
-	var selection = false;
-	var lastKey = _.findLastKey(table);
-	var ceiling = _.last(table[lastKey]);
+	var selection = '';
+	var lastRange = _.last(table);
+	var ceiling = _.last(lastRange.range);
 	var floor = 1;
 
 	//option to set a floor other than 1
@@ -24,21 +24,18 @@ function pick(table, lowerLimit) {
 	var random = _.random(floor, ceiling);
 
 	//iterate through table object and checking random number in each range array, returning the key if true
-	_.forEach(table, function(value, key) {
-		var start = _.first(value);
-		var end = _.last(value);
+	_.forEach(table, function(data) {
+		var start = _.first(data.range);
+		var end = _.last(data.range) + 1;
 		var bool = _.inRange(random, start, end);
 
 		if (bool == true) {
-			selection = key;
+			selection = data.name;
 		}
 	});
 
 	return selection;
-
 }
 
-var choice = pick(tableIndex);
-
-console.log(choice);
+console.log(pick(mutationTableIndex));
 
