@@ -382,6 +382,54 @@ var mindBehaviours = [
 	{range: [500], name: "Vengeful"}
 ];
 
+var mindCognition = [
+	{range: [501, 502], name: "Animal Friendship"},
+	{range: [526], name: "Dual Attention"},
+	{range: [503], name: "Anticipation"},
+	{range: [527, 528], name: "Dual Brain"},
+	{range: [504, 505, 506, 507, 508], name: "Attention Deficit Disorder"},
+	{range: [529, 530, 531, 532, 533], name: "Dyslexia"},
+	{range: [509], name: "Autobiographical Memory"},
+	{range: [534, 535], name: "Earthquake Prediction"},
+	{range: [510, 511, 512], name: "Body Sense"},
+	{range: [536], name: "Editorial Evaluation"},
+	{range: [513], name: "Computer Brain"},
+	{range: [537], name: "Eidetic Memory"},
+	{range: [514, 515], name: "Cultural Flexibility"},
+	{range: [538, 539, 540], name: "Emotionless"},
+	{range: [516, 517, 518, 519, 520], name: "Decreased Mental Capability"},
+	{range: [541], name: "Enhance Mutations"},
+	{range: [521, 522, 523, 524], name: "Directional Sense"},
+	{range: [542, 543], name: "Enhanced Nervous System"},
+	{range: [525], name: "Dreamless"},
+	{range: [544, 545, 546, 547, 548], name: "Enhanced Senses"},
+	{range: [549], name: "Genetic Memory"},
+	{range: [577], name: "No Visual Memory"},
+	{range: [550, 551], name: "Heightened Olfactory Memory"},
+	{range: [578, 579, 580], name: "Quick Learner"},
+	{range: [552], name: "Hive Mind"},
+	{range: [581, 582], name: "Radio Communication"},
+	{range: [553, 554, 555], name: "Increased Brain Size"},
+	{range: [583], name: "Romantic Rapport"},
+	{range: [556, 557, 558, 559, 560], name: "Increased Mental Capability"},
+	{range: [584, 585], name: "Sense Interference"},
+	{range: [561, 562, 563, 564], name: "Insomnia"},
+	{range: [586, 587], name: "Social Perception"},
+	{range: [565], name: "Intuition"},
+	{range: [588], name: "Socially Inept"},
+	{range: [566, 567, 568], name: "Linguistic Aptitude"},
+	{range: [589, 590, 591], name: "Spatial Perception"},
+	{range: [569, 570], name: "Linguistic Mimic"},
+	{range: [592, 593], name: "Speed Reader"},
+	{range: [571], name: "Lucid Dreaming"},
+	{range: [594, 595], name: "Time Sense"},
+	{range: [572, 573], name: "Mechanical Intuition"},
+	{range: [596], name: "Transfer Memories"},
+	{range: [574], name: "Mindless"},
+	{range: [575, 576], name: "Natural Leader"},
+	{range: [597, 598, 599, 600], name: "Weather Sense"}
+];
+
 var test = [
 	{name: 'Wild', range: _.range(1, 101), subtable: mutationTableIndex},
 	{name: 'Boring', range: _.range(101, 201)}
@@ -421,5 +469,5 @@ function pick(table, lowerLimit) {
 	return selection;
 }
 
-console.log(pick(mindBehaviours));
+console.log(pick(mindCognition));
 
