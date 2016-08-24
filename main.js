@@ -9,6 +9,11 @@ var mutationTableIndex = [
 	{name: 'Supernatural Attributes', range: _.range(701, 1001)}	
 ];
 
+var test = [
+	{name: 'Wild', range: _.range(1, 101), subtable: mutationTableIndex},
+	{name: 'Boring', range: _.range(101, 201)}
+];
+
 //randomly chooses from a table, taking an optional lower limit value other than 1
 function pick(table, lowerLimit) {
 	var selection = '';
@@ -31,11 +36,15 @@ function pick(table, lowerLimit) {
 
 		if (bool == true) {
 			selection = data.name;
-		}
+
+			if (data.subtable !== undefined) {				
+				selection = pick(data.subtable);
+			}			
+		}		
 	});
 
 	return selection;
 }
 
-console.log(pick(mutationTableIndex));
+console.log(pick(test));
 
