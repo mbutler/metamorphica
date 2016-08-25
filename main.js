@@ -430,6 +430,71 @@ var mindCognition = [
 	{range: [597, 598, 599, 600], name: "Weather Sense"}
 ];
 
+var psychicPowers = [
+	{range: [601], name: "Animal Control"},
+	{range: [638, 639], name: "Healing"},
+	{range: [602], name: "Anti, Charisma"},
+	{range: [640], name: "Heat Drain"},
+	{range: [603], name: "Attack Reversal"},
+	{range: [641], name: "Hostility Field"},
+	{range: [604, 605], name: "Aura Reading"},
+	{range: [642, 643, 644], name: "Hypnotic"},
+	{range: [606], name: "Block Senses"},
+	{range: [645], name: "Illusionist"},
+	{range: [607, 608], name: "Cause Fear"},
+	{range: [646], name: "Illusory Surroundings"},
+	{range: [609], name: "Cause Insanity"},
+	{range: [647], name: "Implant Memories"},
+	{range: [610, 611], name: "Cause Pain"},
+	{range: [648], name: "Inhibiting Field"},
+	{range: [612, 613], name: "Charm"},
+	{range: [649, 650], name: "Levitation"},
+	{range: [614, 615], name: "Clairaudience"},
+	{range: [651], name: "Life Leech"},
+	{range: [616, 617, 618], name: "Clairvoyance"},
+	{range: [652], name: "Light Manipulation"},
+	{range: [619], name: "Commanding Voice"},
+	{range: [653], name: "Magnetic Control"},
+	{range: [620, 621], name: "Confuse"},
+	{range: [654, 655], name: "Mass Mind"},
+	{range: [622], name: "Create Emotions"},
+	{range: [656, 657], name: "Mental Blast"},
+	{range: [623], name: "Cryokinesis"},
+	{range: [658, 659], name: "Mental Suggestion"},
+	{range: [624], name: "Death Field Generation"},
+	{range: [660], name: "Mind Attack"},
+	{range: [625], name: "Ectoplasmic Hands"},
+	{range: [661, 662, 663], name: "Pain Broadcast"},
+	{range: [626, 627, 628], name: "Emotional Projection"},
+	{range: [664], name: "Precognition"},
+	{range: [629], name: "Enter Mind"},
+	{range: [665, 666], name: "Psychic Broadcast"},
+	{range: [630], name: "Erase Memories"},
+	{range: [667, 668], name: "Psychic Cultural Adaptation"},
+	{range: [631], name: "Familiarity"},
+	{range: [669, 670, 671], name: "Psychic Detection"},
+	{range: [632], name: "Fire in the Head"},
+	{range: [672, 673, 674], name: "Psychic Empathy"},
+	{range: [633, 634, 635], name: "Firewalker"},
+	{range: [675], name: "Psychic Invisibility"},
+	{range: [636, 637], name: "Heal Brain"},
+	{range: [676], name: "Psychic Mirror"},
+	{range: [677, 678, 679], name: "Psychic Vampire"},
+	{range: [688], name: "Symbiotic Control"},
+	{range: [680, 681], name: "Psychoanalyze"},
+	{range: [689, 690, 691], name: "Telekinesis"},
+	{range: [682], name: "Psychometry"},
+	{range: [692], name: "Telekinetic Flight"},
+	{range: [683], name: "Send Dreams"},
+	{range: [693, 694, 695, 696], name: "Telepathy"},
+	{range: [684, 685], name: "Sixth Sense"},
+	{range: [697], name: "Teleport"},
+	{range: [686], name: "Stunning Blast"},
+	{range: [698], name: "Teleport Object"},
+	{range: [687], name: "Summon"},
+	{range: [699, 700], name: "Time Distortion"}
+];
+
 var test = [
 	{name: 'Wild', range: _.range(1, 101), subtable: mutationTableIndex},
 	{name: 'Boring', range: _.range(101, 201)}
@@ -469,5 +534,5 @@ function pick(table, lowerLimit) {
 	return selection;
 }
 
-console.log(pick(mindCognition));
+console.log(pick(psychicPowers));
 
