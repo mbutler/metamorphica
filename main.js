@@ -1,12 +1,10 @@
 var _ = require('lodash');
 
-var mutationTableIndex = [
-	{name: 'Body: Form', range: _.range(1, 201)},
-	{name: 'Body: Function', range: _.range(201, 401)},
-	{name: 'Mind: Behaviours', range: _.range(401, 501)},
-	{name: 'Mind: Cognition', range: _.range(501, 601)},
-	{name: 'Psychic Powers', range: _.range(601, 701)},
-	{name: 'Supernatural Attributes', range: _.range(701, 1001)}	
+var mutation = {};
+
+var testCreature = [
+	{range: [1], name: "Shark"},
+	{range: [2], name: "Alligator"}
 ];
 
 var bodyForm = [
@@ -687,17 +685,39 @@ var supernaturalAttributes = [
 	{range: [945, 946, 947], name: "Superhuman Reflexes"},
 	{range: [994, 995, 996, 997], name: "Werecreature"},
 	{range: [948, 949, 950], name: "Superhuman Speed"},
-	{range: [998], name: "X, Ray Vision"},
+	{range: [998], name: "X-Ray Vision"},
 	{range: [951, 952, 953], name: "Superhuman Strength"},
 	{range: [999], name: "Zombie Master"},
 	{range: [954, 955, 956], name: "Superhuman Toughness"},
 	{range: [1000], name: "Zone of Silence"}
 ];
 
-var test = [
-	{name: 'Wild', range: _.range(1, 101), subtable: mutationTableIndex},
-	{name: 'Boring', range: _.range(101, 201)}
+var alternateLocomotion = [
+	{range: [1, 2, 3], name: pick(testCreature) + " legs"},
+	{range: [13, 14, 15], name: pick(testCreature) + " body "},
+	{range: [4, 5, 6, 7], name: "Quadruped"},
+	{range: [16], name: "Bouncing"},
+	{range: [8, 9, 10], name: "Slithering"},
+	{range: [17], name: "Fronds"},
+	{range: [11], name: "Mass of tendrils or tentacles"},
+	{range: [18, 19], name: "Hovering"},
+	{range: [12], name: "Pseudopods"},
+	{range: [20], name: "Teleporting"}
 ];
+
+var mutationTableIndex = [
+	{name: 'Body: Form', range: _.range(1, 201), subtable: bodyForm},
+	{name: 'Body: Function', range: _.range(201, 401), subtable: bodyFunctions},
+	{name: 'Mind: Behaviours', range: _.range(401, 501), subtable: mindBehaviours},
+	{name: 'Mind: Cognition', range: _.range(501, 601), subtable: mindCognition},
+	{name: 'Psychic Powers', range: _.range(601, 701), subtable: psychicPowers},
+	{name: 'Supernatural Attributes', range: _.range(701, 1001), subtable: supernaturalAttributes}	
+];
+
+var describe = {
+	"Albino": "This mutant has no natural pigment colouration, so its skin and hair are white to pinkish, and its eyes are blue, pink, or red. This makes the mutant acutely vulnerable to sunburn.",
+	"Alternate Locomotion": "Instead of walking on two legs (or whatever is normal for its species), this mutant has " + pick(alternateLocomotion) + " locomotion. Its old method of travel is no longer effective."
+};
 
 //randomly chooses from a table, taking an optional lower limit value other than 1
 function pick(table, lowerLimit) {
@@ -713,7 +733,6 @@ function pick(table, lowerLimit) {
 	}
 
 	var random = _.random(floor, ceiling);
-	console.log(random);
 
 	//iterate through table object and checking random number in each range array, returning the key if true
 	_.forEach(table, function(data) {
@@ -730,8 +749,8 @@ function pick(table, lowerLimit) {
 		}		
 	});
 
-	return selection;
+	return _.lowerCase(selection);;
 }
 
-console.log(pick(bodyForm));
+console.log(pick(mutationTableIndex));
 
