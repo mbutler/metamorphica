@@ -102,7 +102,7 @@ var mammals = [
 	{range: [63], name: "Mule"},
 	{range: [22], name: "Chipmunk"},
 	{range: [64], name: "Muskrat"},
-	{range: [23], name: "Cougar or mountain lion, or puma"},
+	{range: [23], name: "Cougar, mountain lion, or puma"},
 	{range: [65], name: "Naked mole rat"},
 	{range: [24], name: "Coyote"},
 	{range: [66], name: "Neanderthal"},
@@ -129,7 +129,7 @@ var mammals = [
 	{range: [36], name: "Glyptodon"},
 	{range: [77], name: "Rhinoceros"},
 	{range: [37], name: "Goat"},
-	{range: [78], name: "Sabre, tooth tiger or smilodon"},
+	{range: [78], name: "Sabretooth tiger or smilodon"},
 	{range: [38], name: "Gopher"},
 	{range: [79], name: "Sheep"},
 	{range: [39], name: "Guinea pig or hamster"},
@@ -150,7 +150,7 @@ var mammals = [
 	{range: [87], name: "Tenrec"},
 	{range: [48], name: "Jackal"},
 	{range: [88], name: "Tiger"},
-	{range: [49], name: "Jaguar or leopard or panther"},
+	{range: [49], name: "Jaguar, leopard or panther"},
 	{range: [89], name: "Warthog"},
 	{range: [50], name: "Jerboa"},
 	{range: [90], name: "Water buffalo"},
@@ -612,7 +612,7 @@ var fantasticPeoples = [
 	{range: [27], name: "Flesh golem or revenant"},
 	{range: [7], name: "Chaos champion"},
 	{range: [28], name: "Gharhion"},
-	{range: [8], name: "Creature with the head of a " + pick(otherAnimals)},
+	{range: [8], name: "creatures with the head of a " + pick(otherAnimals)},
 	{range: [29], name: "Ghost, wraith, or spectre"},
 	{range: [9], name: "Cyclops"},
 	{range: [30, 31], name: "Ghoul"},
@@ -690,7 +690,7 @@ var fantasticPeoples = [
 	{range: [99, 100], name: "Zombie"}
 ];
 
-var creature = [
+var creatures = [
 	{range: [1, 2], name: "Amphibians and Reptiles", subtable: reptiles},
 	{range: [9], name: "Other Animals", subtable: otherAnimals},
 	{range: [3], name: "Aquatic Animals", subtable: aquatic},
@@ -1283,7 +1283,7 @@ var supernaturalAttributes = [
 	{range: [813], name: "Face of a Demon, God"},
 	{range: [870, 871], name: "Mechanoid"},
 	{range: [814], name: "False Body"},
-	{range: [872], name: "Mercreature"},
+	{range: [872], name: "Mercreatures"},
 	{range: [815], name: "Featureless Face"},
 	{range: [873], name: "Metal Skin"},
 	{range: [816], name: "Flaming Skull Face"},
@@ -1377,7 +1377,7 @@ var supernaturalAttributes = [
 	{range: [944], name: "Superhuman Perception"},
 	{range: [992, 993], name: "Weather Manipulation"},
 	{range: [945, 946, 947], name: "Superhuman Reflexes"},
-	{range: [994, 995, 996, 997], name: "Werecreature"},
+	{range: [994, 995, 996, 997], name: "Werecreatures"},
 	{range: [948, 949, 950], name: "Superhuman Speed"},
 	{range: [998], name: "X-Ray Vision"},
 	{range: [951, 952, 953], name: "Superhuman Strength"},
@@ -1387,8 +1387,8 @@ var supernaturalAttributes = [
 ];
 
 var alternateLocomotion = [
-	{range: [1, 2, 3], name: pick(creature) + " legs"},
-	{range: [13, 14, 15], name: pick(creature) + " body "},
+	{range: [1, 2, 3], name: pick(creatures) + " legs"},
+	{range: [13, 14, 15], name: pick(creatures) + " body "},
 	{range: [4, 5, 6, 7], name: "Quadruped"},
 	{range: [16], name: "Bouncing"},
 	{range: [8, 9, 10], name: "Slithering"},
@@ -1411,28 +1411,193 @@ var animalFeet = [
 var handFeet = [
 	{range: [1], name: "Clumsy hands. "},
 	{range: [3], name: "Human hands."},
-	{range: [2], name: "Dextrous creature hands. "},
-	{range: [4], name: "Same as creature."},
+	{range: [2], name: "Dextrous creatures hands. "},
+	{range: [4], name: "Same as creatures."},
 	{range: [5, 6], name: "Fully bipedal. "},
 	{range: [7], name: "Stooped bipedal."},
-	{range: [8, 9], name: "Half creature, half human. "},
-	{range: [10], name: "Same as creature."}
+	{range: [8, 9], name: "Half creatures, half human. "},
+	{range: [10], name: "Same as creatures."}
 ];
 
 var anthropomorphicAppearance = [
-	{range: [1, 2, 3], name: "Body is half-human, facial features are all creature."},
-	{range: [4], name: "Human that resembles the creature."},
-	{range: [5, 6], name: "Half creature, half human."},
+	{range: [1, 2, 3], name: "Body is half-human, facial features are all creatures."},
+	{range: [4], name: "Human that resembles the creatures."},
+	{range: [5, 6], name: "Half creatures, half human."},
 	{range: [7, 8], name: pick(handFeet)},
 ];
 
 var armour = [
-	{range: [1], name: "Blubber (soft)."},
-	{range: [4], name: "Hard shell (hardest)."},
-	{range: [2], name: "Bone plates (hardest)."},
-	{range: [5], name: "Scales (hard or soft)."},
-	{range: [3], name: "Carapace (harder)."},
-	{range: [6], name: "Thick skin (hard)."}
+	{range: [1], name: "Blubber"},
+	{range: [4], name: "Hard shell"},
+	{range: [2], name: "Bone plate"},
+	{range: [5], name: "Scale"},
+	{range: [3], name: "Carapace"},
+	{range: [6], name: "Thick skin"}
+];
+
+var bodyParts = [
+	{range: [1, 2, 3], name: "Abdomen"},
+	{range: [39], name: "Left foot"},
+	{range: [76, 77, 78], name: "Right arm"},
+	{range: [4, 5, 6, 7, 8], name: "Abdomen and legs"},
+	{range: [40], name: "Left hand"},
+	{range: [79], name: "Right ear"},
+	{range: [9, 10, 11, 12], name: "Back/spine"},
+	{range: [41, 42, 43], name: "Left leg"},
+	{range: [80, 81, 82], name: "Right eye"},
+	{range: [13, 14], name: "Buttocks"},
+	{range: [44, 45, 46, 47], name: "Mouth"},
+	{range: [83], name: "Right foot"},
+	{range: [15, 16, 17, 18, 19], name: "Chest"},
+	{range: [48, 49, 50], name: "Nose or snout"},
+	{range: [84], name: "Right hand"},
+	{range: [20, 21, 22, 23], name: "Face"},
+	{range: [51, 52, 53, 54, 55, 56], name: "Pair of arms"},
+	{range: [85, 86, 87], name: "Right leg"},
+	{range: [24, 25, 26], name: "Genitals"},
+	{range: [57, 59, 59], name: "Pair of ears"},
+	{range: [88, 89], name: "Shoulders"},
+	{range: [27, 28, 29, 30, 31], name: "Head"},
+	{range: [60, 61, 62, 63], name: "Pair of eyes"},
+	{range: [90, 91, 92], name: "Tail"},
+	{range: [32, 33, 34], name: "Left arm"},
+	{range: [64, 65, 66], name: "Pair of feet"},
+	{range: [93, 94, 95], name: "Torso and arms"},
+	{range: [35], name: "Left ear"},
+	{range: [67, 68, 69], name: "Pair of hands"},
+	{range: [96, 97, 98], name: "Torso and head"},
+	{range: [36, 37, 38], name: "Left eye"},
+	{range: [70, 71, 72, 73, 74, 75], name: "Pair of legs"},
+	{range: [99, 100], name: "Torso, head, and both/all arms"}
+];
+
+var colours = [
+	{range: [1], name: "Amber"},
+	{range: [35], name: "Gold"},
+	{range: [68], name: "Pumpkin"},
+	{range: [2], name: "Apricot"},
+	{range: [36], name: "Green"},
+	{range: [69], name: "Purple"},
+	{range: [3], name: "Aqua"},
+	{range: [37], name: "Green-yellow"},
+	{range: [70], name: "Red"},
+	{range: [4], name: "Aquamarine"},
+	{range: [38], name: "Grey"},
+	{range: [71], name: "Red-brown"},
+	{range: [5], name: "Auburn"},
+	{range: [39], name: "Indigo"},
+	{range: [72], name: "Red-violet"},
+	{range: [6], name: "Azure"},
+	{range: [40], name: "Iridescent colour"},
+	{range: [73], name: "Rose"},
+	{range: [7], name: "Beige"},
+	{range: [41], name: "Ivory"},
+	{range: [74], name: "Ruddy"},
+	{range: [8], name: "Black"},
+	{range: [42], name: "Jade"},
+	{range: [75], name: "Russet"},
+	{range: [9], name: "Blue"},
+	{range: [43], name: "Jale"},
+	{range: [76], name: "Rust"},
+	{range: [10], name: "Blue-green"},
+	{range: [44], name: "Jet"},
+	{range: [77], name: "Salmon"},
+	{range: [11], name: "Blue-grey"},
+	{range: [45], name: "Khaki"},
+	{range: [78], name: "Scarlet"},
+	{range: [12], name: "Blue-violet"},
+	{range: [46], name: "Lavender"},
+	{range: [79], name: "Sea green"},
+	{range: [13], name: "Brass"},
+	{range: [47], name: "Lilac"},
+	{range: [80], name: "Sepia"},
+	{range: [14], name: "Bronze"},
+	{range: [48], name: "Lime"},
+	{range: [81], name: "Silver"},
+	{range: [15], name: "Brown"},
+	{range: [49], name: "Magenta"},
+	{range: [82], name: "Sky blue"},
+	{range: [16], name: "Bright green"},
+	{range: [50], name: "Mahogany"},
+	{range: [83], name: "Sparkly colour"},
+	{range: [17], name: "Buff"},
+	{range: [51], name: "Maroon"},
+	{range: [84], name: "Tan"},
+	{range: [18], name: "Burgundy"},
+	{range: [52], name: "Matte colour"},
+	{range: [85], name: "Tangerine"},
+	{range: [19], name: "Cerulean"},
+	{range: [53], name: "Mauve"},
+	{range: [86], name: "Taupe"},
+	{range: [20], name: "Charcoal"},
+	{range: [54], name: "Metallic colour"},
+	{range: [87], name: "Teal"},
+	{range: [21], name: "Chartreuse"},
+	{range: [55], name: "Mustard yellow"},
+	{range: [88], name: "Terra cotta"},
+	{range: [22], name: "Copper"},
+	{range: [56], name: "Ochre"},
+	{range: [89], name: "Turquoise"},
+	{range: [23], name: "Cream"},
+	{range: [57], name: "Octarine"},
+	{range: [90], name: "Two colours shifting"},
+	{range: [24], name: "Crimson"},
+	{range: [58], name: "Off-white"},
+	{range: [91], name: "Ulfire"},
+	{range: [25], name: "Cyan"},
+	{range: [59], name: "Olive"},
+	{range: [92], name: "Ultramarine"},
+	{range: [26], name: "Dolm"},
+	{range: [60], name: "Orange"},
+	{range: [93], name: "Umber"},
+	{range: [27], name: "Drab"},
+	{range: [61], name: "Orange-red"},
+	{range: [94], name: "Verdigris"},
+	{range: [28], name: "Emerald"},
+	{range: [62], name: "Peach"},
+	{range: [95], name: "Vermillion"},
+	{range: [29], name: "Forest green"},
+	{range: [63], name: "Periwinkle"},
+	{range: [96], name: "Violet"},
+	{range: [30], name: "Fuchsia"},
+	{range: [64], name: "Pink"},
+	{range: [97], name: "White"},
+	{range: [31], name: "Garrow"},
+	{range: [65], name: "Pink-orange"},
+	{range: [98], name: "Wisteria"},
+	{range: [32], name: "Ginger"},
+	{range: [66], name: "Plum"},
+	{range: [99], name: "Yellow"},
+	{range: [33], name: "Glossy colour"},
+	{range: [67], name: "Puce"},
+	{range: [34], name: "Glowing colour "},
+	{range: [100], name: "Yellow-green"}
+];
+
+var ciliaCoverage = [
+	{range: [1], name: "Back"},
+	{range: [2], name: "Front"},
+	{range: [3, 4], name: "Full body"},
+	{range: [5, 6], name: "Full body", subtable: bodyParts}
+];
+
+var claws = [
+	{range: [1], name: "Crab-like claws for hands"},
+	{range: [3], name: "Sharp, iron, hard nails"},
+	{range: [2], name: "Retractable claws"},
+	{range: [4], name: "Talons"}
+];
+
+var orifices = [
+	{range: [1], name: "Anuses"},
+	{range: [5, 6], name: "Eyes"},
+	{range: [10], name: "Nostrils"},
+	{range: [2, 3], name: "Cloacas/Urethras"},
+	{range: [7], name: "Large pores"},
+	{range: [11], name: "Siphons or valves"},
+	{range: [4], name: "Ears"},
+	{range: [8, 9], name: "Mouths"},
+	{range: [12], name: "Vaginas"}
 ];
 
 var mutationTableIndex = [
@@ -1450,7 +1615,28 @@ var describe = {
 	"Amorphous": "This mutant is a blob, probably without distinguishable limbs or extremities.",
 	"Animal Feet": "This mutant has " + pick(animalFeet),
 	"Antennae": "This mutant has a set of two or more antennae extending from its head, which it can use to feel and possibly smell and taste or otherwise augment its various senses.",
-	"Anthropomorphic Animal": "This mutant appears to be an uplifted or anthropomorphic, talking " + pick(creature) + ". Appearance: " + pick(anthropomorphicAppearance) + "."
+	"Anthropomorphic Animal": "This mutant appears to be an anthropomorphic, talking " + pick(creatures) + ". Appearance: " + pick(anthropomorphicAppearance) + ".",
+	"Armour": "This mutant is protected by " + pick(armour) + " armour.",
+	"Atrophied or Malformed Part": "This mutant has an atrophied or malformed " + pick(bodyParts),
+	"Attractive": "This mutant is considered incredibly attractive, physically perfect, and sexually desirable by other members of its species (barring any other mutations that might spoil such beauty).",
+	"Backwards Parts": "This mutant has a " + pick(bodyParts) + " attached backwards.",
+	"Beak": "This mutant has a beak instead of the mouth that is normal for its species. If it normally has a beak, now it has two.",
+	"Bestial Face": "This mutant has a face that perfectly or superficially resembles that of a " + pick(creatures),
+	"Birthmark": "This mutant has a prominent " + pick(bodyParts) + " birthmark resembling a wine stain, or other appropriate discoloration.",
+	"Body Barbs": "Bone spurs grow out of this mutant’s " + pick(bodyParts) + ", and can be used as weapons.",
+	"Boils and Sores": "This mutant’s body is covered in painful and irritating boils and sores that leak fluids and are prone to infection.",
+	"Bristles": "This mutant has coarse bristly hair all over it that offers some small amount of protection.",
+	"Bulging Eyes": "This mutant’s eyes are large and bulbous.",
+	"Cat's Eyes": "This mutant’s pupils are slit like a cat’s eyes, increasing its night vision.",
+	"Changing Colours": "This mutant physically changes colour, based on temperament and temperature, alternating between " + pick(colours) + ", " + pick(colours) + ", " + pick(colours) + ", " + pick(colours) + ", " + pick(colours) + ", and " + pick(colours),
+	"Cilia": "This mutant, or part of it, is covered on its " + pick(ciliaCoverage) + " with tiny, movable, hair-like appendages or tentacles that probably keep it free from dirt and constantly move food toward its mouth.",
+	"Claws": "This mutant has " + pick(claws) + " that it can use for weapons.",
+	"Clothes": "This mutant appears to be wearing clothes, but this is actually just the appearance of its naked skin. It can still wear clothes over top of its garment-resembling skin, of course.",
+	"Clubfoot": "One of this mutant’s feet is deformed and gimpy. It is probably shorter than the other, impedes proper movement, and makes shoe purchasing more difficult.",
+	"Complex Mouthparts": "This mutant has additional complex parts around its mouth, like an arthropod. This can include external chelicerae, mandibles, maxillae, a proboscis, a radula, or other parts.",
+	"Covered in Orifices": "This mutant’s body is covered in " + pick(orifices),
+	"Crest": "This mutant has a crest on top of its head, made of rigid flesh, bone, cartilage, feathers, horn, scales, or other material.",
+
 };
 
 //randomly chooses from a table, taking an optional lower limit value other than 1
@@ -1475,7 +1661,7 @@ function pick(table, lowerLimit) {
 		var bool = _.inRange(random, start, end);
 
 		if (bool == true) {
-			selection = _.lowerCase(data.name);
+			selection = _.toLower(data.name);
 			
 			if (data.subtable !== undefined) {				
 				selection = pick(data.subtable);
@@ -1487,9 +1673,10 @@ function pick(table, lowerLimit) {
 }
 
 var mutate = pick(mutationTableIndex);
-mutate = "Anthropomorphic Animal";
+//mutate = "armour";
 mutate = _.startCase(mutate);
-console.log(describe[mutate]);
-//console.log(pick(fantasticPeoples));
+//console.log(describe[mutate]);
+//console.log(pick(armour));
+console.log(pick(colours));
 
 
