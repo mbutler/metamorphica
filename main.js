@@ -1600,6 +1600,87 @@ var orifices = [
 	{range: [12], name: "Vaginas"}
 ];
 
+var resemblance = [
+	{range: [1], name: "Bone or cartilage"},
+	{range: [4], name: "Erectile tissue"},
+	{range: [7], name: "Noses"},
+	{range: [2], name: "Coral"},
+	{range: [5], name: "Eyestalks"},
+	{range: [8, 9], name: "Thumbs"},
+	{range: [3], name: "Ears"},
+	{range: [6], name: "Fingers or toes."},
+	{range: [10], name: "Tongues"}
+];
+
+var organs = [
+	{range: [1], name: "Bladder and kidneys"},
+	{range: [5], name: "Liver and pancreas"},
+	{range: [2], name: "Brains"},
+	{range: [6], name: "Lungs and respiratory system"},
+	{range: [3], name: "Heart and blood circulation"},
+	{range: [7], name: "Sense organs"},
+	{range: [4], name: "Intestines and stomach"},
+	{range: [8], name: "Two organs or sets of organs"}
+];
+
+var fangs = [
+	{range: [1], name: "All teeth sharpened"},
+	{range: [4], name: "Rat-like incisors"},
+	{range: [2], name: "Long canines"},
+	{range: [5], name: "Retractable canines"},
+	{range: [3], name: "Needle-like teeth"},
+	{range: [6], name: "Tusks"}
+];
+
+var fur = [
+	{range: [1], name: "Long fur"},
+	{range: [3], name: "Short, soft fur"},
+	{range: [2], name: "Short, bristly fur"},
+	{range: [4], name: "Thick, curly hair"}
+];
+
+var horns = [
+	{range: [1, 2], name: "One large horn."},
+	{range: [9, 10], name: "Three or more large horns."},
+	{range: [3, 4], name: "One small horn."},
+	{range: [11], name: "Three or more small horns."},
+	{range: [5], name: "A rack of dull antlers."},
+	{range: [12, 13, 14], name: "Two large, curved horns."},
+	{range: [6, 7], name: "A rack of sharp antlers."},
+	{range: [15, 16], name: "Two large, straight horns."},
+	{range: [8], name: "A rack of velvet, covered antlers."},
+	{range: [17, 18, 19, 20], name: "Two small horns."}
+];
+
+var weapon = [
+	{range: [1], name: "Club (blunt, jagged, or spiked)"},
+	{range: [4], name: "Spear or piercing weapon."},
+	{range: [2], name: "Flail, lash, or whip"},
+	{range: [5], name: "Explosive weapon"},
+	{range: [3], name: "Knife or sword, like blades"},
+	{range: [6], name: "Ranged weapon"}
+];
+
+var leaves = [
+	{range: [1], name: "Barbed leaves"},
+	{range: [7, 8], name: "Grass"},
+	{range: [2, 3], name: "Coniferous needles"},
+	{range: [9, 10], name: "Perpetually green leaves"},
+	{range: [4, 5], name: "Deciduous leaves"},
+	{range: [11], name: "Razor, edged leaves"},
+	{range: [6], name: "Fronds"},
+	{range: [12], name: "Saw, edged leaves"}
+];
+
+var limbs = [
+	{range: [1], name: "Arm"},
+	{range: [3], name: "Hand"},
+	{range: [5], name: "Tail or other"},
+	{range: [2], name: "Foot"},
+	{range: [4], name: "Leg"},
+	{range: [6], name: "Wings or other"}
+];
+
 var mutationTableIndex = [
 	{name: 'Body: Form', range: _.range(1, 201), subtable: bodyForm},
 	{name: 'Body: Function', range: _.range(201, 401), subtable: bodyFunctions},
@@ -1636,6 +1717,49 @@ var describe = {
 	"Complex Mouthparts": "This mutant has additional complex parts around its mouth, like an arthropod. This can include external chelicerae, mandibles, maxillae, a proboscis, a radula, or other parts.",
 	"Covered in Orifices": "This mutant’s body is covered in " + pick(orifices),
 	"Crest": "This mutant has a crest on top of its head, made of rigid flesh, bone, cartilage, feathers, horn, scales, or other material.",
+	"Crown": "This mutant has a crown of " + pick(resemblance) + " encircling its head.",
+	"Diffused Organs": "The " + pick(organs) + " are diffused, spread out in a larger system within the mutant’s body, instead of concentrated in one space. This makes the organ(s) much more resistant to injury, as it can continue to operate when a part of it is wounded.",
+	"Doppelgänger": "This mutant looks exactly like one or more other individuals it may or may not know.",
+	"Double Mouth": "This mutant has an interior mouth inside of an exterior mouth. The interior mouth may or may not be extensible. It cannot be seen when the exterior mouth is closed.",
+	"Enormously Fat": "This mutant is so corpulent that it can no longer run and likely has trouble walking.",
+	"Exotic Genitalia": "This mutant’s sexual organs include unusual shapes and structures, and may include erectile tissue in various places all over the body or in strange locations.",
+	"Extra Eyes": "This mutant has " + _.random(1, 6) + " more eyes than normal.",
+	"Extra Fingers and Toes": "This mutant has " + _.random(1, 4) + "more fingers or toes than normal.",
+	"Extra Joints": "This mutant has one or more extra joints in its limbs.",
+	"Extra Orifices": "This mutant has and extra " + pick(orifices),
+	"Extremely Thin": "This mutant can’t maintain a normal body weight for its species, and is very thin.",
+	"Eyestalks": "This mutant’s eyes are on the end of stalks, which may or may not be semi-retractable.",
+	"Fangs": "This mutant has dangerous " + pick(fangs),
+	"Feathers": "This mutant has feathers on part or all of its body.",
+	"Fin": "This mutant has a fin protruding from its back or head, which helps it swim.",
+	"Flaking Skin": "This mutant has full-body dandruff due to dry and flaky skin.",
+	"Flippers": "This mutant has flippers instead of either arms and hands, or both arms as well as legs.",
+	"Fur": "This mutant has " + pick(fur) + " covering all or most of its body.",
+	"Fused Ribs": "This mutant’s ribs are fused together, forming a bony plate across the upper torso.",
+	"Gliding Membranes": "This mutant has membranes or flaps of skin between its limbs that, along with hollow bones, allows it to glide after jumping from heights.",
+	"Hairless": "This mutant has no hair, fur, or feathers anywhere on its body.",
+	"Headless": "This mutant has no head. Its face is located on its chest or some other part of its body.",
+	"Hemihypertrophy": "One side of this mutant’s body is significantly larger than the other, resulting in an unattractive lack of symmetry. Limbs on one side are longer and stronger than those on the other side, and facial features are distorted.",
+	"Hooks": "This mutant has hooks on its hands and/or feet, made of bone, cartilage, horn, or other material, that it can use as weapons, or to make climbing much easier.",
+	"Hopper": "This mutant has one large, powerful leg that it hops around on. Maybe two legs.",
+	"Horns": "This mutant has " + pick(horns) + " growing out of its head.",
+	"Huge Beard": "This mutant has an enormous beard growing out of its face.",
+	"Huge Head": "This mutant’s head is about twice as big as normal for its species.",
+	"Hideous Appearance": "This mutant’s appearance is deformed in some way that makes it universally repugnant to others of its species.",
+	"Hump": "This mutant has one or more humps on its back that store food and water, allowing the mutant to go without for extended periods of time.",
+	"Hunchback": "This mutant’s back is twisted and hunched, making it slightly more difficult to move.",
+	"Internal Weapon": "This mutant can produce a " + pick(weapon) + " from its own body, or transform part of its body into a weapon. The mutant can produce a single weapon, or one weapon per limb. These weapons can be hidden when not in use.",
+	"Large Ears": "This mutant’s external ears are " + _.random(2,11) + " times as large as normal for its species, or if its species does not have external ears, this mutant does. Because the ears direct sound, this can result in an increased ability to detect and identify specific noises.",
+	"Large Rear End": "This mutant’s ass, hind quarters, or abdominal segment is extraordinarily large.",
+	"Large Size": "This mutant is " + _.random(2,4) + " times larger than normal for its species.",
+	"Leaves": "This mutant is covered in " + pick(leaves) + ".",
+	"Limb Loss": "This mutant has fewer limbs than is normal for its species. Missing a " + pick(limbs),
+	
+
+
+
+
+
 
 };
 
@@ -1673,10 +1797,10 @@ function pick(table, lowerLimit) {
 }
 
 var mutate = pick(mutationTableIndex);
-//mutate = "armour";
+mutate = "large ears";
 mutate = _.startCase(mutate);
-//console.log(describe[mutate]);
+console.log(describe[mutate]);
 //console.log(pick(armour));
-console.log(pick(colours));
+//console.log(pick(colours));
 
 
