@@ -782,14 +782,14 @@ var bodyForm = [
 	{range: [112], name: "No Nose"},
 	{range: [113], name: "No Skin"},
 	{range: [151], name: "Strange Interior Organs"},
-	{range: [114, 115], name: "Oddly, Shaped Tongue"},
+	{range: [114, 115], name: "Oddly Shaped Tongue"},
 	{range: [152], name: "Strange Texture"},
 	{range: [116], name: "One Eye"},
-	{range: [153, 154, 155, 156], name: "Strangely-Coloured Eyes"},
+	{range: [153, 154, 155, 156], name: "Strangely Coloured Eyes"},
 	{range: [117], name: "Overgrown Body Part"},
-	{range: [157, 158, 159, 160], name: "Strangely-Coloured Hair"},
+	{range: [157, 158, 159, 160], name: "Strangely Coloured Hair"},
 	{range: [118, 119, 120, 121, 122], name: "Patterned Skin"},
-	{range: [161, 162, 163, 164, 165], name: "Strangely-Coloured Skin"},
+	{range: [161, 162, 163, 164, 165], name: "Strangely Coloured Skin"},
 	{range: [123], name: "Physically Immature"},
 	{range: [166], name: "Stubby Digits"},
 	{range: [124], name: "Pinhead"},
@@ -1620,7 +1620,7 @@ var organs = [
 	{range: [3], name: "Heart and blood circulation"},
 	{range: [7], name: "Sense organs"},
 	{range: [4], name: "Intestines and stomach"},
-	{range: [8], name: "Two organs or sets of organs"}
+	{range: [8], name: "Sets of organs"}
 ];
 
 var fangs = [
@@ -1640,16 +1640,16 @@ var fur = [
 ];
 
 var horns = [
-	{range: [1, 2], name: "One large horn."},
-	{range: [9, 10], name: "Three or more large horns."},
-	{range: [3, 4], name: "One small horn."},
-	{range: [11], name: "Three or more small horns."},
-	{range: [5], name: "A rack of dull antlers."},
-	{range: [12, 13, 14], name: "Two large, curved horns."},
-	{range: [6, 7], name: "A rack of sharp antlers."},
-	{range: [15, 16], name: "Two large, straight horns."},
-	{range: [8], name: "A rack of velvet, covered antlers."},
-	{range: [17, 18, 19, 20], name: "Two small horns."}
+	{range: [1, 2], name: "One large horn"},
+	{range: [9, 10], name: "Three or more large horns"},
+	{range: [3, 4], name: "One small horn"},
+	{range: [11], name: "Three or more small horns"},
+	{range: [5], name: "A rack of dull antlers"},
+	{range: [12, 13, 14], name: "Two large, curved horns"},
+	{range: [6, 7], name: "A rack of sharp antlers"},
+	{range: [15, 16], name: "Two large, straight horns"},
+	{range: [8], name: "A rack of velvet, covered antlers"},
+	{range: [17, 18, 19, 20], name: "Two small horns"}
 ];
 
 var weapon = [
@@ -1680,6 +1680,120 @@ var limbs = [
 	{range: [4], name: "Leg"},
 	{range: [6], name: "Wings or other"}
 ];
+
+var bodyLocation = [
+	{range: [1, 2], name: "Back"},
+	{range: [5], name: "Foot"},
+	{range: [8], name: "Head"},
+	{range: [3], name: "Chest"},
+	{range: [6], name: "Groin or hip"},
+	{range: [9], name: "Knee"},
+	{range: [4], name: "Elbow"},
+	{range: [7], name: "Hand"},
+	{range: [10], name: "Stomach"}
+];
+
+var mane = [
+	{range: [1], name: "Mane of feathers"},
+	{range: [5, 6], name: "Mane of hair like a lion"},
+	{range: [2], name: "Mane of fleshy tentacles"},
+	{range: [7], name: "Mane of barbs, quills, or spines"},
+	{range: [3, 4], name: "Mane of hair like a horse"},
+	{range: [8], name: "Membranous mane like a lizard"}
+];
+
+var earlessness = [
+	{range: [1, 2], name: "No ears except vibration sensors."},
+	{range: [3], name: "No ears whatsoever, internal or external."},
+	{range: [4, 6], name: "No external ears (just holes in head)."}
+];
+
+var tongue = [
+	{range: [1], name: "Extremely thick"},
+	{range: [5], name: "Hollow"},
+	{range: [2], name: "Extremely long"},
+	{range: [6], name: "Parasitic organism"},
+	{range: [3], name: "Extremely short"},
+	{range: [7], name: "Sharp and blade, like"},
+	{range: [4], name: "Forked or pincer, shaped"},
+	{range: [8], name: "Tentacle"}
+];
+
+var pattern = [
+	{range: [1, 2], name: "Banded"},
+	{range: [12, 13], name: "Small spots"},
+	{range: [3], name: "Belted"},
+	{range: [14], name: "Patchy"},
+	{range: [4, 5], name: "Camouflage pattern"},
+	{range: [15, 16], name: "Small spots"},
+	{range: [6, 8], name: "Different colour face or head"},
+	{range: [17, 19], name: "Striped"},
+	{range: [9, 11], name: "Different colour hands and feet"},
+	{range: [20], name: "Whorled"}
+];
+
+var texture = [
+	{range: [1], name: "Bark or plant material"},
+	{range: [7], name: "Hard or soft plastic"},
+	{range: [2], name: "Brick, dirt, or stone"},
+	{range: [8], name: "Metal"},
+	{range: [3], name: "Crystal"},
+	{range: [9], name: "Rough fabric"},
+	{range: [4], name: "Foam"},
+	{range: [10], name: "Sand or sandpaper"},
+	{range: [5], name: "Geometric patterns"},
+	{range: [11], name: "Smooth and slippery"},
+	{range: [6], name: "Glass"},
+	{range: [12], name: "Soft fabric"}
+];
+
+var duration = [
+	{range: [1], name: "Several days"},
+	{range: [3], name: "Several months"},
+	{range: [2], name: "Several hours"},
+	{range: [4], name: "Several weeks"}
+];
+
+var tail = [
+	{range: [1, 2], name: "Long tail"},
+	{range: [5], name: "Scorpion tail (with venom)"},
+	{range: [3], name: "Mace tail"},
+	{range: [6, 7], name: "Short tail"},
+	{range: [4], name: "Prehensile or tentacle tail"},
+	{range: [8], name: "Reptile tail"}
+];
+
+var tentacles = [
+	{range: [1], name: "Tentacles instead of arms"},
+	{range: [5], name: "Tentacles on back of body"},
+	{range: [2], name: "Tentacles instead of hair"},
+	{range: [6], name: "Tentacles on front of body"},
+	{range: [3], name: "Tentacles instead of legs"},
+	{range: [7], name: "Tentacles on head or face"},
+	{range: [4], name: "Tentacles on arms and legs"},
+	{range: [8], name: "Tentacles on two locations"}
+];
+
+var weapons = [
+	{range: [1, 2], name: "Blade"},
+	{range: [4], name: "Hook"},
+	{range: [7], name: "Scissor"},
+	{range: [3], name: "Blunt"},
+	{range: [5, 6], name: "Pincer"},
+	{range: [8], name: "Stinger"}
+];
+
+var wings = [
+	{range: [1], name: "Alien wings"},
+	{range: [5], name: "Glider wings"},
+	{range: [2], name: "Avian wings"},
+	{range: [6], name: "Gossamer wings"},
+	{range: [3], name: "Bat wings"},
+	{range: [7], name: "Insect wings"},
+	{range: [4], name: "Dragonfly wings"},
+	{range: [8], name: "Angel wings"}
+];
+
 
 var mutationTableIndex = [
 	{name: 'Body: Form', range: _.range(1, 201), subtable: bodyForm},
@@ -1749,12 +1863,78 @@ var describe = {
 	"Hump": "This mutant has one or more humps on its back that store food and water, allowing the mutant to go without for extended periods of time.",
 	"Hunchback": "This mutant’s back is twisted and hunched, making it slightly more difficult to move.",
 	"Internal Weapon": "This mutant can produce a " + pick(weapon) + " from its own body, or transform part of its body into a weapon. The mutant can produce a single weapon, or one weapon per limb. These weapons can be hidden when not in use.",
-	"Large Ears": "This mutant’s external ears are " + _.random(2,11) + " times as large as normal for its species, or if its species does not have external ears, this mutant does. Because the ears direct sound, this can result in an increased ability to detect and identify specific noises.",
+	"Large Ears": "This mutant’s external ears are " + _.random(2, 11) + " times as large as normal for its species, or if its species does not have external ears, this mutant does. Because the ears direct sound, this can result in an increased ability to detect and identify specific noises.",
 	"Large Rear End": "This mutant’s ass, hind quarters, or abdominal segment is extraordinarily large.",
-	"Large Size": "This mutant is " + _.random(2,4) + " times larger than normal for its species.",
+	"Large Size": "This mutant is " + _.random(2, 4) + " times larger than normal for its species.",
 	"Leaves": "This mutant is covered in " + pick(leaves) + ".",
 	"Limb Loss": "This mutant has fewer limbs than is normal for its species. Missing a " + pick(limbs),
-	
+	"Limb Transference": "This mutant has an extra " + pick(limbs) + " on its " + pick(bodyLocation),
+	"Long Face": "This mutant’s facial features are elongated to an extreme amount, giving it a long face.",
+	"Long Legs": "This mutant’s legs are freakishly long, allowing it to move up to  per cent faster.",
+	"Long Neck": "This mutant’s neck is at least d+ times as long as is normal for its species.",
+	"Long Nose": "This mutant’s nose sticks out much farther than is considered extreme for its species.",
+	"Long Tongue": "This mutant’s tongue is at least d+ times as long as is normal for its species.",
+	"Loose Skin": "This mutant’s loose, baggy skin hangs off in folds and rolls, almost appearing to be melting.",
+	"Mane": "This mutant’s head is framed by a " + pick(mane),
+	"Mostly Hairless": "This mutant still has hair on the top of its head, but little or no hair on the rest of its body. It may or may not have eyebrows and/or a small patch of pubic hair, but cannot grow a beard.",
+	"Multiple Arms": "This mutant has " + _.random(1, 4) + " more arm(s) than is normal for its species.",
+	"Multiple Heads": "This mutant has " + _.random(1, 3) + " additional head(s).",
+	"Multiple Legs": "This mutant has " + _.random(1, 4) + " more leg(s) than is normal for its species.",
+	"No Ears": "This mutant has no " + pick(earlessness),
+	"No Eyes": "This mutant has no eyes in its face.",
+	"No Nose": "This mutant has slits for a nose instead of any external organ.",
+	"No Skin": "This mutant has no skin protecting its fat, muscles, and internal organs from the environment. Either it has a hardy immune system or it uses some form of artificial skin.",
+	"Oddly-Shaped Tongue": "This mutant’s tongue is not the normal shape for its species. It is a " + pick(tongue) + " tongue.",
+	"One Eye": "This mutant has a single, cyclopean eye in the centre of its face.",
+	"Overgrown Body Part": "This mutant's " + pick(bodyParts) + " have grown to " + _.random(2, 4) + " times larger than normal.",
+	"Patterned Skin": "This mutant’s skin (or fur) is a " + pick(pattern) + " that is otherwise natural to the mutant’s species.",
+	"Physically Immature": "This mutant looks like a child, and will always appear pre-pubescent no matter how old.",
+	"Pinhead": "This mutant has a shrunken, tiny head. This affects brain size and mental capacities.",
+	"Pointed Head": "This mutant has a pointed, cone-shaped head.",
+	"Pouch": "This mutant has a pouch of skin, like a marsupial, or a similar compartment in its body.",
+	"Protective Eyelids": "This mutant has additional, protective eyelids made of chitin, bone, or other material more durable than the mutant’s skin. They protect the mutant’s eyes from harm.",
+	"Puny": "This mutant is shrivelled and weak, its muscles wasted and withered and its body as small as one-half normal size. The mutant’s physical capabilities are reduced by at least one quarter.",
+	"Quills, Spines, or Thorns": "This mutant’s back (or other area) is covered in spiny quills that provide protection and can be used as weapons. There is a  in  chance the mutant will be able to project these quills, spines, or thorns d times each week before they must be regrown.",
+	"Radula": "Instead of a tongue, this mutant has a toothed, chitinous ribbon like the radula of a mollusc, which can be used to scrape and cut food. It is still capable of speech.",
+	"Re-Arranged Face": "This mutant’s face is completely re-arranged. Even though it still has all the normal facial features, they are all in completely different locations than is normal.",
+	"Redundant Vital Organs": "This mutant has multiple " + pick(organs) + ", so that if one is damaged, the mutant is less aversely affected.",
+	"Reverse Pedalism": "If the mutant is normally bipedal, it becomes a quadruped. If the mutant is normally quadrupedal, it becomes a biped. If the mutant has a different form of locomotion, reverse the limbs normally used for movement and manipulation.",
+	"Scales": "This mutant’s skin is covered with scales.",
+	"Scars": "This mutant bears prominent scars as a result of an over-production of scar tissue, a skin disease, or treatment of some other condition.",
+	"Short Legs": "This mutant’s legs are abnormally short, cutting its normal movement rate and jumping distance by at least half.",
+	"Siamese Twin": "This mutant has two bodies joined together at birth, which may or may not be two different people. Other mutations and powers may belong to both or either twin.",
+	"Skull Face": "This mutant’s face resembles a skull, with either no skin on it, or only a small amount of skin that does not prevent the skull from showing through.",
+	"Small Size": "This mutant is a miniature version of its normal race. " + _.random(2, 4) + " times smaller than usual.",
+	"Snout": "This mutant has an elongated, snout-like face.",
+	"Stomach Orifice": "This mutant has an extra orifice near its stomach that can consume and regurgitate food.",
+	"Strange Ears": "This mutant has odd-looking ears.",
+	"Strange Interior Organs": "The inside of this mutant’s body is completely different from that of others of its species, and its internal organs make no sense according to its exterior appearance.",
+	"Strange Texture": "This mutant’s skin feels like " + pick(texture) + ".",
+	"Strangely Coloured Eyes": "This mutant’s eyes are " + pick(colours) + ", and may not even have a visible iris or pupil.",
+	"Strangely Coloured Hair": "This mutant’s hair is " + pick(colours) + ".",
+	"Strangely Coloured Skin": "This mutant has skin that is " + pick(pattern) + " and " + pick(colours) + ".",
+	"Stubby Digits": "This mutant has short and stubby fingers and toes.",
+	"Sympathetic Biomorphism": "The physical form of this mutant changes to comply with the individuals it associates with, even if that shape has more limbs and sense organs. After " + pick(duration) + ", depending on speed, its will resemble those around it in shape, though its cosmetic appearance will not change.",
+	"Tail": "This mutant has a " + pick(tail) + ".",
+	"Taller": "This mutant is " + _.random(10, 100) + "% taller than the normal maximum height for its species. The mutant’s other dimensions are not proportionally filled out.",
+	"Tentacles": "This mutant has " + pick(tentacles) + ".",
+	"Tongueless": "This mutant has no tongue.",
+	"Toothed Skin": "This mutant’s skin is covered in small scales that resemble sharp teeth, which can be used to cut and saw, and make it uncomfortable—even dangerous—for others to touch the mutant.",
+	"Transparent Eyelids": "This mutant’s eyes have an additional pair of transparent eyelids, such as nictating membranes, that protect the eyes from damage without unduly impairing vision. These eyelids can be tinted, to aid vision in bright light, or designed to filter out certain colours.",
+	"Trunk": "This mutant has a prehensile nose, like the trunk of an elephant.",
+	"Tumours": "This mutant suffers from large tumours that grow on its body.",
+	"Twisted Frame": "This mutant’s body shape is twisted and bent, making normal movements and posture difficult or even impossible. This reduces agility, co-ordination, and reflexes by half.",
+	"Vestigial Wings": "A small, useless pair of wings sprouts from this mutant’s back or shoulders.",
+	"Walking Head": "This mutant has no appreciable torso between its head and limbs and so appears to be a walking head.",
+	"Warty Skin": "This mutant’s skin is covered in warty growths.",
+	"Weapon Hands": "This mutant has hands formed in the shape of " + pick(weapons) + " weapons.",
+	"Webbed Digits": "This mutant’s hands and feet are webbed, allowing it to swim faster.",
+	"Whiskers": "This mutant has long whiskers on its face that it uses to aid perception.",
+	"Wide": "This mutant is " + _.random(10, 100) + "% per cent wider than others of its species, but is normal-sized in all other respects.",
+	"Wings": "If this mutant is already armless, it has " + pick(wings) + " in addition to any other limbs.",
+	"Wrinkled Skin": "This mutant’s skin is covered in thick, pruny wrinkles, lines, and creases.",
+
+
 
 
 
@@ -1797,10 +1977,13 @@ function pick(table, lowerLimit) {
 }
 
 var mutate = pick(mutationTableIndex);
-mutate = "large ears";
-mutate = _.startCase(mutate);
-console.log(describe[mutate]);
+mutate = "strangely coloured eyes";
+
+//console.log(describe['Tentacles']);
 //console.log(pick(armour));
-//console.log(pick(colours));
+var melody = pick(bodyForm);
+console.log(melody);
+mutate = _.startCase(melody);
+console.log(describe[mutate]);
 
 
